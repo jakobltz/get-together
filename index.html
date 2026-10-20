@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dinner mit Jakob</title>
+<title>Get-Together</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Hanken+Grotesk:wght@400;500;600&display=swap">
@@ -104,8 +104,8 @@ input:focus-visible,textarea:focus-visible,button:focus-visible{
 <body>
 <main class="sheet">
   <section class="card">
-    <p class="eyebrow" id="ev-city">Köln</p>
-    <h1 id="ev-title">Abendessen mit Jakob</h1>
+    <p class="eyebrow" id="ev-city">Einladung</p>
+    <h1 id="ev-title">Get-Together in Köln</h1>
     <dl>
       <dt>Wann</dt><dd id="ev-when">—</dd>
       <dt>Wo</dt><dd id="ev-where">—</dd>
@@ -155,16 +155,16 @@ input:focus-visible,textarea:focus-visible,button:focus-visible{
 
   var EVENTS = {
     koeln: {
-      city:"Köln", title:"Abendessen mit Jakob",
-      when:"Freitag, 23. Oktober, 19:30 Uhr",
+      city:"Einladung", title:"Get-Together in Köln",
+      when:"Freitag, 23. Oktober, 19:00 Uhr",
       where:"Päffgen, Friesenstraße",
-      foot:"Antworte bitte bis Mittwochabend — danach reserviere ich."
+      foot:"Sag bitte bis Mittwochabend Bescheid — dann kann ich die Reservierung noch anpassen."
     },
     frankfurt: {
-      city:"Frankfurt", title:"Abendessen mit Jakob",
-      when:"Freitag, 30. Oktober, 19:30 Uhr",
+      city:"Einladung", title:"Get-Together in Frankfurt",
+      when:"Freitag, 30. Oktober, 19:00 Uhr",
       where:"Ort folgt",
-      foot:"Antworte bitte bis Mittwochabend — danach reserviere ich."
+      foot:"Sag bitte bis Mittwochabend Bescheid — dann kann ich die Reservierung noch anpassen."
     }
   };
 
@@ -177,7 +177,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible{
   document.getElementById("ev-when").textContent  = ev.when;
   document.getElementById("ev-where").textContent = ev.where;
   document.getElementById("foot").textContent     = ev.foot;
-  document.title = ev.title + " — " + ev.city;
+  document.title = ev.title;
 
   var attending = null, guests = 0;
   var nameEl = document.getElementById("name");
