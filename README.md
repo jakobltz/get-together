@@ -24,6 +24,6 @@ Tabelle `public.rsvp`: `event_id`, `name`, `attending`, `guests`, `note`,
 Row Level Security ist aktiv und erlaubt der Rolle `anon` ausschließlich
 `insert`. Es gibt bewusst **keine** Leseregel: Wer den Link hat, kann antworten,
 aber nicht sehen, wer sonst zugesagt hat. Der Publishable Key in `index.html`
-ist dafür gemacht, öffentlich zu stehen — der Schutz liegt in der Policy, nicht
+ist dafür gemacht, öffentlich zu stehen, der Schutz liegt in der Policy, nicht
 im Schlüssel. Ausgelesen wird der Stand über einen Access Token, der nicht in
 diesem Repo liegt.

@@ -107,8 +107,8 @@ input:focus-visible,textarea:focus-visible,button:focus-visible{
     <p class="eyebrow" id="ev-city">Einladung</p>
     <h1 id="ev-title">Get-Together in Köln</h1>
     <dl>
-      <dt>Wann</dt><dd id="ev-when">—</dd>
-      <dt>Wo</dt><dd id="ev-where">—</dd>
+      <dt>Wann</dt><dd id="ev-when">…</dd>
+      <dt>Wo</dt><dd id="ev-where">…</dd>
     </dl>
   </section>
 
@@ -156,7 +156,7 @@ input:focus-visible,textarea:focus-visible,button:focus-visible{
   var EVENTS = {
     koeln: {
       city:"Einladung", title:"Get-Together in Köln",
-      when:"Freitag, 23. Oktober — 19:30 Uhr ankommen, Tisch ab 20:00 Uhr",
+      when:"Freitag, 23. Oktober, 19:30 Uhr ankommen, Tisch ab 20:00 Uhr",
       where:"Gilden im Zims, Heumarkt 77, 50667 Köln",
       foot:"Sag bitte bis Mittwochabend Bescheid, dann kann ich die Reservierung noch anpassen."
     },
@@ -239,9 +239,9 @@ input:focus-visible,textarea:focus-visible,button:focus-visible{
       var first = nameEl.value.trim().split(/\s+/)[0];
       document.getElementById("done-h").textContent = attending
         ? "Schön, bis dann!"
-        : "Schade — danke dir.";
+        : "Schade, danke dir.";
       document.getElementById("done-p").textContent = attending
-        ? (first + ", du stehst auf der Liste" + (guests ? " — mit " + guests + (guests === 1 ? " Begleitung" : " Begleitungen") : "") + ". " + ev.when + ", " + ev.where + ".")
+        ? (first + ", du stehst auf der Liste" + (guests ? " (mit " + guests + (guests === 1 ? " Begleitung)" : " Begleitungen)") : "") + ". " + ev.when + ", " + ev.where + ".")
         : ("Danke für die Rückmeldung, " + first + ". Nächstes Mal.");
       form.hidden = true; done.hidden = false;
       done.scrollIntoView({behavior:"smooth", block:"nearest"});
